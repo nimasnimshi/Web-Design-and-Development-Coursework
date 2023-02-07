@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <link href="css/externalstyle.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="image/logo5.ico" type="image/x-icon">
+    
+             
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        var mybutton=document.getElementById("myBtn")
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+           mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+</script>
+<!--       Start Navigation      -->  
+   <header>
+    <div class="container">
+        <div id="branding">
+           <img src="image/logo1.png" alt="logo">     
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallerynew21.html">Gallery</a></li>
+                <li><a href="Listen.html">Listen</a></li>
+                <li class="current"><a href="quiz.html">Quiz</a></li>
+                <li><a href="buy_products.html">Store</a></li>
+                <li><a href="query.html">Contact Us</a></li>                    
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--        End Navigation       -->
+    <div id="header"></div>
+    <div id="main"></div>
+    <div id="hello">   
+      <h1>Click the Image</h1>
+      <br> <br> 
+      <div id="quiz" >
+        <button onclick="quizrules()" id="quizimage" value="false"><img src="image/quiz-time.jpg" alt="Quiz Image"></button>
+      </div>
+     
+    </div>
+    <div id="rules">
+      <h1>Rules</h1>
+      <ul>
+        <li>You have ten questions to answer</li>
+        <li>For each correct answer you will get 2 marks</li>
+        <li>For each wrong answer you will be deducted 1 mark</li>
+        <li>If you don't answer marks won't be deducted </li>
+        <li>1 minutes to answer the question</li>
+      </ul>
+      <button class="ru" onclick="hello()"><span>Continue</span></button>
+    </div>
+    <div id="game">
+      <form id="box">
+        <img src="image/ready_for_quiz.png" alt="readyforquiz" style="width:118%;height:300px;margin-top:-10%;margin-left:-9%;border-radius: 20px;">
+        <div id="lab">
+          <label >Enter your name:</label>
+          <input type="text" name="name" placeholder="Your name" id="fname" style="width:250px;height:25px;" required>
+          <button class="playgame" onclick="play()">Play</button>
+        </div>
+      </form>
+    </div>
+    <div id="questiones">
+      <div id="time"></div>
+      <div id="q1">
+        <img src="image/Q1.jpg" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">1. What was the band originally called?
+        <div id="selection">
+          <input type="radio" name="q1"  id="incorrect1">Maroon 6<br/>
+          <input type="radio" name="q1"  id="incorrect2">Burgundy Boys<br/>
+          <input type="radio" name="q1"  id="correct">Kara's Flowers<br/>
+          <button onclick="q1()" id="nextbutton">Next Quiz</button>
+        </div>
+      </div>
+      <div id="q2">
+        <img src="image/Q2.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">2. Which member of Maroon 5 is a coach on The Voice?
+        <div id="selection">
+          <input type="radio" name="q2"  id="correct">Adam Levine<br/>
+          <input type="radio" name="q2"  id="incorrect1">Mickey Madden<br/>
+          <input type="radio" name="q2"  id="incorrect2">James Valentine<br/>
+          <button onclick="q2()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q3">
+        <img src="image/Q3.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">3. What year did Maroon 5 form?
+        <div id="selection">
+          <input type="radio" name="q3"  id="incorrect2">1990<br/>
+          <input type="radio" name="q3"  id="correct">1994<br/>
+          <input type="radio" name="q3"  id="incorrect1">2000<br/>
+          <button onclick="q3()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q4">
+        <img src="image/Q4.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">4.What big gig did Maroon 5 play in 2019?
+        <div id="selection">
+          <input type="radio" name="q4" id="incorrect1">The MTV awards<br/>
+          <input type="radio" name="q4" id="correct">The Superbowl Halftime Show<br/>
+          <input type="radio" name="q4" id="incorrect2">Glastonbury<br/>
+          <button onclick="q4()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q5">
+        <img src="image/Q5.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">5. How many members does Maroon 5 have?
+        <div id="selection">
+          <input type="radio" name="q5"  id="incorrect1">3<br/>
+          <input type="radio" name="q5"  id="incorrect2">5<br/>
+          <input type="radio" name="q5"  id="correct">7<br/>
+          <button onclick="q5()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q6">
+        <img src="image/Q6.jpg" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">6. Where is the USA are Maroon 5 from?
+        <div id="selection">
+          <input type="radio" name="q6"  id="incorrect1">Texas<br/>
+          <input type="radio" name="q6"  id="incorrect2">New Jersey<br/>
+          <input type="radio" name="q6"  id="correct">California<br/>
+          <button onclick="q6()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q7">
+        <img src="image/Q7.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">7. Which famous actor has frontman Adam Levine been friends since childhood?
+        <div id="selection">
+          <input type="radio" name="q7"  id="incorrect1">Brad Pitt<br/>
+          <input type="radio" name="q7"  id="correct">Jake Gyllenhaal<br/>
+          <input type="radio" name="q7"  id="incorrect2">Chris Pratt<br/>
+          <button onclick="q7()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q8">
+        <img src="image/Q8.jpg" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">8. Complete the lyrics; 'I got moves like...?'
+        <div id="selection">
+          <input type="radio" name="q8"  id="correct">Jagger<br/>
+          <input type="radio" name="q8"  id="incorrect1">Bugs Bunny<br/>
+          <input type="radio" name="q8"  id="incorrect2">Your mum<br/>
+          <button onclick="q8()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q9">
+        <img src="image/Q9.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">9. What Grammy award did the band win in 2005?
+        <div id="selection">
+          <input type="radio" name="q9"  id="correct">Best New Artist<br/>
+          <input type="radio" name="q9"  id="incorrect1">Best Song<br/>
+          <input type="radio" name="q9"  id="incorrect2">Best Dressed<br/>
+          <button onclick="q9()" id="nextbutton">Next Quiz</button>
+        </div>   
+      </div>
+      <div id="q10">
+        <img src="image/Q10.png" alt="maroon5 Image" id="queimages">
+        <p id="musicquiz">10. Where did the members of Maroon 5 originally meet?
+        <div id="selection">
+          <input type="radio" name="q10"  id="incorrect1">In a McDonalds<br/>
+          <input type="radio" name="q10"  id="correct">In High School<br/>
+          <input type="radio" name="q10"  id="incorrect2">At The Local Swimming Pool<br/>
+          <button onclick="q10()" id="nextbutton">Score board>></button>
+        </div>   
+      </div> 
+    </div> 
+       
+    <div id="scorecard">
+      <div class="row" style="margin-left:33%;width:100%;margin-top:9%;">
+        <div class="column">
+          <div class="card">
+            <h3>Summary</h3>
+            <p><div id="playername"></div>
+            <p><div id="scoregot"></div>
+            <p><div id="result"></div>
+            <p><div id="timetaken"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="row" style="margin-top:5%;">
+        <div class="column">
+          <div class="card" id="card1">
+            <h3>Question 1</h3>
+            <p><div id="Q1"></div>
+            <p><div id="marks1"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card" id="card2">
+            <h3>Question 2</h3>
+            <p><div id="Q2"></div>
+            <p><div id="marks2"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card" id="card3">
+            <h3>Question 3</h3>
+            <p><div id="Q3"></div>
+            <p><div id="marks3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:5%;">
+        <div class="column">
+          <div class="card" id="card4">
+            <h3>Question 4</h3>
+            <p><div id="Q4"></div>
+            <p><div id="marks4"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card" id="card5">
+            <h3>Question 5</h3>
+            <p><div id="Q5"></div>
+            <p><div id="marks5"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card" id="card6">
+            <h3>Question 6</h3>
+            <p><div id="Q6"></div>
+            <p><div id="marks6"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:5%;">
+        <div class="column">
+          <div class="card" id="card7">
+            <h3>Question 7</h3>
+            <p><div id="Q7"></div>
+            <p><div id="marks7"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card" id="card8">
+            <h3>Question 8</h3>
+            <p><div id="Q8"></div>
+            <p><div id="marks8"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card" id="card9">
+            <h3>Question 9</h3>
+            <p><div id="Q9"></div>
+            <p><div id="marks9"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-left:33%;width:100%;margin-top:5%;">
+        <div class="column">
+          <div class="card" id="card10">
+            <h3>Question 10</h3>
+            <p><div id="Q10"></div>
+            <p><div id="marks10"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-left:33%;width:100%;margin-top:5%;">
+        <div class="column">
+          <a href="Quiz.html"><div  class="retry">
+            <h3>Retry</h3>
+          </div></a>
+        </div>
+      </div>
+    </div>
+    <div id="space" style="height:100px;"></div>
+    <script src="quiz.js"></script>
+<!--    Start Footer     -->   
+<footer>
+  <section>
+     <div class="container">
+        <div class="box6">
+          <img src="image/logo1.png" alt="TCS Logo" style="width:450px" style="height:150px" >
+          <p> Universal Music Group 2220 Colorado Avenue, Santa Monica, CA <br>90404 (310) 865-4000   
+        </div>
+        <div id="box7">
+            <h1>Development Team</h1>
+            <table id="team">
+             <tr>
+         <td ><a href="pageeditor/ranudi.html"><img src="image/ranudi.png" alt="student1" class="team-img" ></a></td>
+         <td><a href="pageeditor/vinuja.html"><img src="image/vinuja.png" alt="student2" class="team-img" ></a></td>
+         <td><a href="pageeditor/nimshi.html"><img src="image/nimshi.png" alt="student3" class="team-img" ></a></td>
+         <td><a href="pageeditor/dinil.html"><img src="image/dinil.png" alt="student4" class="team-img" ></a></td>
+             </tr>               
+          </table>
+          <a href="about.html" class="button">Meet Us</a>              
+        </div>
+     </div>
+     <div style="background-color: #121212">
+         <div class="container2">
+          <div id="footer-bar">
+           <p> All copyright credits are reserved to the <a href="https://www.maroon5.com/">"Maroon 5"</a>
+            <table>
+                <tr>
+                  <td><a href="site_map_1.html" class="button2">Site Map</a></td>
+                  <td><a href="pageeditor/nimshi.html" class="button2">Page Editor : Nimas Nimshi</a></td> 
+                </tr>
+            </table>
+             </div>
+         </div>
+     </div>
+  </section>
+      
+  </footer>
+<!--    End Footer     -->
+
+  </body>
+</html>

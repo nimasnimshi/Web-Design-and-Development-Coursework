@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+}
+section{
+    padding: 100px 0;
+}
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;   
+    background: #111;
+    padding: 100px 0;
+}
+.title{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    transform: translateX(-50%);
+    background: #fff;
+}
+.title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 160px;
+    font-size: 20px;
+    color: purple;
+    padding: 0 5px;
+    background: #222;
+    content: "Members Details";
+    transform: translateX(-50%);
+}
+.teams {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-bottom: 100px;
+}
+.card {
+    position: relative;
+    max-width: 250px;
+    display:grid;
+    height: 215px;
+    background: #222;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+}
+.card:hover {
+    height: 390px;
+    background: purple;  
+}
+.card .imgbox {
+    position: relative;
+    width: 200px;
+    height: 260px;
+    margin: auto;
+    top: -60px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.8);  
+}
+.card .imgbox img {
+    height: 260px;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;   
+}
+.card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;  
+}
+.card img{
+    font-size: 50px;
+    color: #006a4e;
+    transition: color 0.3s ease;
+}
+.card:hover img{
+    border: 2px solid #fff;
+    border-radius: 8px 8px 0 0;
+}
